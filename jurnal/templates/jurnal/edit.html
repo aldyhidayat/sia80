@@ -1,0 +1,13 @@
+{%extends 'main.html'%}
+
+{% block content %}
+    <form action="" method="POST">
+        {%csrf_token%}
+        <table>
+        {{form.as_table}}
+        </table>
+        <button class="button-add">Simpan</button>
+    </form>
+    <a href="{% url 'jurnal:dashboard' %}"><button class="button-return">Kembali</button></a>
+{% endblock content %}
+    

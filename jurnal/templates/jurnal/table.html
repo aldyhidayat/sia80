@@ -1,0 +1,54 @@
+
+<div class="toolbar">
+  
+  <a href="{% url 'jurnal:tambah' %}"><button type="button" class="button-add">Tambah</button></a>
+
+  <div class="sum-anggaran">
+    
+    {% if debets.total == kredits.total %}
+    <div class="status">
+      Jumlah Debet Kredit SAMA
+    </div>
+    {% else %}
+    <div class="status-2">
+      Jumlah Debet Kredit TIDAK SAMA
+    </div>
+    {% endif %}
+      
+
+    <div class="sum-anggaran-2">
+      Total Debet: Rp. <p class="nilai-debet">{{debets.total|floatformat:0}}</p>
+    </div>
+    <div class="sum-anggaran-3">
+    Total Kredit: Rp. <p class="nilai-debet">{{kredits.total|floatformat:0}}</p>
+    </div>
+  </div>
+</div>
+<table id="tabel">
+    <tr>
+      <th id="th1">Tanggal</th>
+      <th id="th2">Akun</th>
+      <th id="th2">Keterangan</th>
+      <th id="th1">Kategori</th>
+      <th id="th2">Jumlah</th>
+      <th id="table-action">Action</th>
+    </tr>
+    
+      
+      {% for jurnal in jurnals %}
+      <tr>
+        <td>{{ jurnal.tanggal}}</td>
+        <td>{{ jurnal.akun}}</td>
+        <td>{{ jurnal.keterangan}}</td>
+        <td>{{ jurnal.kategori}}</td>
+        <td>Rp. {{ jurnal.jumlah|floatformat:0}}</td>
+        <td><center>
+          <a href="{% url 'jurnal:ubah' jurnal.id %}"><button type="button" class="button-edit">Ubah</button></a>
+          <a href="{% url 'jurnal:hapus' jurnal.id %}"><button type="button" class="button-delete">Hapus</button></a>
+        </center>
+      </td>
+      </tr>
+      
+      {% endfor %}
+
+</table>

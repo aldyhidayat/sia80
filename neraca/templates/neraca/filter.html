@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="bulan" placeholder="Dari Bulan Ke-" class="form-login">
+    <input type="text" name="tahun" placeholder="Sampai Bulan Ke-" class="form-login">
+    <input type="submit" class="button-add">
+  </form>
+  {{month}} - {{year}}
+    {% include 'neraca/table.html' %}
+{% endblock content %}

@@ -1,0 +1,33 @@
+<a href="{% url 'akun:tambah' %}"><button type="button" class="button-add">Tambah</button></a>
+<table id="tabel">
+    <tr>
+      <th id="table-no">No Akun</th>
+      <th id="th5">Nama Akun</th>
+      <th id="th3">Jenis Akun</th>
+      <th id="table-action">Action</th>
+    </tr>
+    
+      
+      {% for akun in akuns %}
+      <tr>
+        <td>{{ akun.no}}</td>
+        <td>{{ akun.nama}}</td>
+        <td>{{ akun.jenis}}</td>
+        <td>
+          <a href="{% url 'akun:ubah' akun.id%}"><button type="button" class="button-edit">Ubah</button></a>
+          <a href="{% url 'akun:hapus' akun.id %}"><button type="button" class="button-delete">Hapus</button></a>
+      </td>
+      </tr>
+
+      {% endfor %}
+        
+</table>
+
+<!-- <div id="popUp">
+  <h2>Peringatan</h2>
+  <br><br>
+  <h4>Apakah anda akan menghapus akun {%for akun in akuns%}{{akun.nama}} {%endfor%}</h4>
+  <br><br>
+  <button class="button-delete">Hapus</button>
+  <button class="button-add">Batal</button>
+</div> -->

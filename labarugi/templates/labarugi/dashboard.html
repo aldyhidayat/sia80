@@ -1,0 +1,8 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <a href="{% url 'labarugi:filter' %}"><button  class="button-add">Filter Bulan</button></a>
+    <br>
+    {% include 'labarugi/table.html' %}
+{% endblock content %}

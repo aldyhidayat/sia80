@@ -1,0 +1,45 @@
+{% load static %}
+<nav>
+  <div class="top-nav">
+  <div class="nav-brand">
+      <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="logo">
+          <a href="{% url 'beranda:dashboard' %}">Akuntansi</a>
+      </div>
+  </div>
+</div>
+  <div class="nav-side-icon">
+      <ul id="ulSide">
+        <li><a href="{% url 'beranda:dashboard' %}"><img src="{% static 'img/beranda.png' %}" alt="" class="logo-menu-side"></a></li>
+        <li>
+            <a href="{% url 'akun:dashboard' %}"><img src="{% static 'img/akun.png' %}" alt="" class="logo-menu-side"></a>
+        </li>
+        <hr>
+        <li><a href="{% url 'jurnal:dashboard' %}"><img src="{% static 'img/jurnal.png' %}" alt="" class="logo-menu-side"></a></li>
+        <li><a href="{% url 'neraca:dashboard' %}"><img src="{% static 'img/neraca.png' %}" alt="" class="logo-menu-side"></a></li>
+        <li><a href="{% url 'labarugi:dashboard' %}"><img src="{% static 'img/uang.png' %}" alt="" class="logo-menu-side"></a></li>
+        <hr>
+        <li>{{user|truncatechars:3|upper }}</li>
+        <li><a href="{% url 'logout' %}"><img src="{% static 'img/logout.png' %}" alt="" class="logo-menu-side"></a></li>
+        <hr> 
+      </ul>
+  </div>
+  <div class="nav-side">
+      <ul id="ulmenu">
+          <li><a href="{% url 'beranda:dashboard' %}"><img src="{% static 'img/beranda.png' %}" alt="" class="logo-menu">Beranda</a></li>
+          <li><a href="{% url 'akun:dashboard' %}"><img src="{% static 'img/akun.png' %}" alt="" class="logo-menu">Akun</a></li>
+          <hr>
+          <li><a href="{% url 'jurnal:dashboard' %}"><img src="{% static 'img/jurnal.png' %}" alt="" class="logo-menu">Jurnal Umum</a></li>
+          <li><a href="{% url 'neraca:dashboard' %}"><img src="{% static 'img/neraca.png' %}" alt="" class="logo-menu">Neraca</a></li>
+          <li><a href="{% url 'labarugi:dashboard' %}"><img src="{% static 'img/uang.png' %}" alt="" class="logo-menu">Laba Rugi</a></li>
+          <hr>
+          <li>Selamat Datang <br>{{user|upper}}</li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+        
+  </div>
+</nav>

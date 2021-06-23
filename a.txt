@@ -1,0 +1,5 @@
+
+def monthfilter(request, month):
+    month = datetime.date.month()
+    .filter(tanggal__month=month.month)
+return render(request, 'neraca/dashboard.html', context)

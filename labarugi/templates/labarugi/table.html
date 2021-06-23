@@ -1,0 +1,766 @@
+{% load mathfilters %}
+<br>
+<table id="tabel">
+    <tr>
+        <th id="table-no">Coa</th>
+        <th id="th3">Perkiraan</th>
+        <th id="th2">Total</th>
+        
+    </tr>
+    <tr>
+        <td>4000</td>
+        <td><p class="td2">Penerimaan Sumbangan Pemerintah</p></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4001</td>
+        <td ><p class="td3">BOS</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id2.total %}
+            {{id1.total|floatformat:0}}
+            {% elif not id1.total %}
+            -{{id2.total|floatformat:0}}
+            {% else %}
+            {{id1.total|sub:id2.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+
+    </tr>
+    <tr>
+        <td>4002</td>
+        <td><p class="td3">BSM</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id4.total %}
+            {{id3.total|floatformat:0}}
+            {% elif not id3.total %}
+            -{{id4.total|floatformat:0}}
+            {% else %}
+            {{id3.total|sub:id4.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+     
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td4">Jumlah Penerimaan Sumbangan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not totalkredit1.total %}
+            {{totaldebet1.total|floatformat:0}}
+            {% elif not totaldebet1.total %}
+            -{{totalkredit1.total|floatformat:0}}
+            {% else %}
+            {{totaldebet1.total|sub:totalkredit1.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>4100</td>
+        <td><p class="td2">Penerimaan Pendidikan </p></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4101</td>
+        <td><p class="td3">Biaya Pendaftaraan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id6.total %}
+            {{id5.total|floatformat:0}}
+            {% elif not id5.total %}
+            -{{id6.total|floatformat:0}}
+            {% else %}
+            {{id5.total|sub:id6.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>4102</td>
+        <td><p class="td3">Asrama</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id8.total %}
+            {{id7.total|floatformat:0}}
+            {% elif not id7.total %}
+            -{{id8.total|floatformat:0}}
+            {% else %}
+            {{id8.total|sub:id7.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>4103</td>
+        <td><p class="td3">SPP</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id10.total %}
+            {{id9.total|floatformat:0}}
+            {% elif not id9.total %}
+            -{{id10.total|floatformat:0}}
+            {% else %}
+            {{id9.total|sub:id10.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>4104</td>
+        <td><p class="td3">Uang Kegiatan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id12.total %}
+            {{id11.total|floatformat:0}}
+            {% elif not id11.total %}
+            -{{id12.total|floatformat:0}}
+            {% else %}
+            {{id11.total|sub:id12.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>4015</td>
+        <td><p class="td3">Sarana Prasarana</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id14.total %}
+            {{id13.total|floatformat:0}}
+            {% elif not id13.total %}
+            -{{id14.total|floatformat:0}}
+            {% else %}
+            {{id13.total|sub:id14.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>4106</td>
+        <td><p class="td3">Uang Seragam</p></td>
+        </td> 
+        <td>
+            <div class="nomer">
+            {% if not id16.total %}
+            {{id15.total|floatformat:0}}
+            {% elif not id15.total %}
+            -{{id16.total|floatformat:0}}
+            {% else %}
+            {{id15.total|sub:id16.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+        
+    </tr>
+    <tr>
+        <td>4107</td>
+        <td><p class="td3">Uang Buku</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id18.total %}
+            {{id17.total|floatformat:0}}
+            {% elif not id17.total %}
+            -{{id18.total|floatformat:0}}
+            {% else %}
+            {{id17.total|sub:id18.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>4108</td>
+        <td><p class="td3">Enrichment Program</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id20.total %}
+            {{id19.total|floatformat:0}}
+            {% elif not id19.total %}
+            -{{id20.total|floatformat:0}}
+            {% else %}
+            {{id19.total|sub:id20.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>4109</td>
+        <td><p class="td3">Administrasi Lainnya</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id22.total %}
+            {{id21.total|floatformat:0}}
+            {% elif not id21.total %}
+            -{{id22.total|floatformat:0}}
+            {% else %}
+            {{id21.total|sub:id22.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td4">Jumlah Penerimaan Pendidikan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not totalkredit2.total %}
+            {{totaldebet2.total|floatformat:0}}
+            {% elif not totaldebet2.total %}
+            -{{totalkredit2.total|floatformat:0}}
+            {% else %}
+            {{totaldebet2.total|sub:totalkredit2.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td1">Beban-Beban</p></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5000</td>
+        <td><p class="td2">Beban Tenaga Kerja</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id24.total %}
+            {{id23.total|floatformat:0}}
+            {% elif not id23.total %}
+            -{{id24.total|floatformat:0}}
+            {% else %}
+            {{id23.total|sub:id24.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+
+    </tr>
+    <tr>
+        <td>5001</td>
+        <td><p class="td3">Gaji Guru & Karyawan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id24.total %}
+            {{id23.total|floatformat:0}}
+            {% elif not id23.total %}
+            -{{id24.total|floatformat:0}}
+            {% else %}
+            {{id23.total|sub:id24.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5002</td>
+        <td><p class="td3">Transport Kehadiran</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id26.total %}
+            {{id25.total|floatformat:0}}
+            {% elif not id25.total %}
+            -{{id26.total|floatformat:0}}
+            {% else %}
+            {{id25.total|sub:id26.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td>5007</td>
+        <td><p class="td3">THR</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id28.total %}
+            {{id27.total|floatformat:0}}
+            {% elif not id27.total %}
+            -{{id28.total|floatformat:0}}
+            {% else %}
+            {{id27.total|sub:id28.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td>5008</td>
+        <td><p class="td3">Honor Pelaksanaan Ujian</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id30.total %}
+            {{id29.total|floatformat:0}}
+            {% elif not id29.total %}
+            -{{id30.total|floatformat:0}}
+            {% else %}
+            {{id29.total|sub:id30.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td>5009</td>
+        <td><p class="td3">BPJS Ketenagakerjaan (JKK, JKM, JHT)</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id32.total %}
+            {{id31.total|floatformat:0}}
+            {% elif not id31.total %}
+            -{{id32.total|floatformat:0}}
+            {% else %}
+            {{id31.total|sub:id32.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td>5010</td>
+        <td><p class="td3">Pengembagan SDM</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id34.total %}
+            {{id33.total|floatformat:0}}
+            {% elif not id33.total %}
+            -{{id34.total|floatformat:0}}
+            {% else %}
+            {{id33.total|sub:id34.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td></td>
+        <td><p class="td4">Jumlah Beban Tenaga Kerja</p></td>
+        <td>
+            <div class="nomer">
+            {% if not totalkredit3.total %}
+            {{totaldebet3.total|floatformat:0}}
+            {% elif not totaldebet3.total %}
+            -{{totalkredit3.total|floatformat:0}}
+            {% else %}
+            {{totaldebet3.total|sub:totalkredit3.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5051</td>
+        <td><p class="td2">Biaya ATK/ Barang Cetak/ Foto Kopi</p></td>
+        <td>
+
+        </td> 
+    </tr>
+
+    <tr>
+        <td>5052</td>
+        <td><p class="td3">Listrik</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id36.total %}
+            {{id35.total|floatformat:0}}
+            {% elif not id35.total %}
+            -{{id36.total|floatformat:0}}
+            {% else %}
+            {{id35.total|sub:id36.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5053</td>
+        <td><p class="td3">Beban Peralatan/ Perlengkapan yang tidak dika</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id38.total %}
+            {{id37.total|floatformat:0}}
+            {% elif not id37.total %}
+            -{{id38.total|floatformat:0}}
+            {% else %}
+            {{id37.total|sub:id38.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5054</td>
+        <td><p class="td3">Telekomunikasi</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id40.total %}
+            {{id39.total|floatformat:0}}
+            {% elif not id39.total %}
+            -{{id40.total|floatformat:0}}
+            {% else %}
+            {{id39.total|sub:id40.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5055</td>
+        <td><p class="td3">Rumah Tangga</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id42.total %}
+            {{id41.total|floatformat:0}}
+            {% elif not id41.total %}
+            -{{id42.total|floatformat:0}}
+            {% else %}
+            {{id41.total|sub:id42.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td>5056</td>
+        <td><p class="td3">Speedy</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id44.total %}
+            {{id43.total|floatformat:0}}
+            {% elif not id43.total %}
+            -{{id44.total|floatformat:0}}
+            {% else %}
+            {{id43.total|sub:id44.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5057</td>
+        <td><p class="td3">Pemeliharaan & Perbaikan Bangunan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id46.total %}
+            {{id45.total|floatformat:0}}
+            {% elif not id45.total %}
+            -{{id46.total|floatformat:0}}
+            {% else %}
+            {{id45.total|sub:id46.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td>5058</td>
+        <td><p class="td3">Pemeliharaan & Perbaikan Peralatan/ Perlengkapan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id48.total %}
+            {{id47.total|floatformat:0}}
+            {% elif not id47.total %}
+            -{{id48.total|floatformat:0}}
+            {% else %}
+            {{id47.total|sub:id48.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5060</td>
+        <td><p class="td3">Rapat/ Perjamuan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id50.total %}
+            {{id49.total|floatformat:0}}
+            {% elif not id49.total %}
+            -{{id50.total|floatformat:0}}
+            {% else %}
+            {{id49.total|sub:id50.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5061</td>
+        <td><p class="td3">Transport Dinas Luar</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id52.total %}
+            {{id51.total|floatformat:0}}
+            {% elif not id51.total %}
+            -{{id52.total|floatformat:0}}
+            {% else %}
+            {{id51.total|sub:id52.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5062</td>
+        <td><p class="td3">Operasional Yayasan di bebankan SMP</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id54.total %}
+            {{id53.total|floatformat:0}}
+            {% elif not id53.total %}
+            -{{id54.total|floatformat:0}}
+            {% else %}
+            {{id53.total|sub:id54.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5063</td>
+        <td><p class="td3">Marketing (Pulsa admin Paket data, reward</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id56.total %}
+            {{id55.total|floatformat:0}}
+            {% elif not id55.total %}
+            -{{id56.total|floatformat:0}}
+            {% else %}
+            {{id55.total|sub:id56.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5064</td>
+        <td><p class="td3">Kegiatan Sekolah</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id58.total %}
+            {{id57.total|floatformat:0}}
+            {% elif not id57.total %}
+            -{{id58.total|floatformat:0}}
+            {% else %}
+            {{id57.total|sub:id58.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td4">Jumlah Beban Operasional</p></td>
+        <td>
+            <div class="nomer">
+            {% if not totalkredit4.total %}
+            {{totaldebet4.total|floatformat:0}}
+            {% elif not totaldebet4.total %}
+            -{{totalkredit4.total|floatformat:0}}
+            {% else %}
+            {{totaldebet4.total|sub:totalkredit4.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5901</td>
+        <td><p class="td3">Beban Penyusutan Bangunan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id60.total %}
+            {{id59.total|floatformat:0}}
+            {% elif not id59.total %}
+            -{{id60.total|floatformat:0}}
+            {% else %}
+            {{id59.total|sub:id60.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5902</td>
+        <td><p class="td3">Beban Penyusutan Perlengkapan/ Perabot</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id62.total %}
+            {{id61.total|floatformat:0}}
+            {% elif not id61.total %}
+            -{{id62.total|floatformat:0}}
+            {% else %}
+            {{id61.total|sub:id62.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5903</td>
+        <td><p class="td3">Beban Penyusutan Peralatan/ Equipment</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id64.total %}
+            {{id63.total|floatformat:0}}
+            {% elif not id63.total %}
+            -{{id64.total|floatformat:0}}
+            {% else %}
+            {{id63.total|sub:id64.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>5904</td>
+        <td><p class="td3">Beban Penyusutan Kendaraan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id66.total %}
+            {{id65.total|floatformat:0}}
+            {% elif not id65.total %}
+            -{{id66.total|floatformat:0}}
+            {% else %}
+            {{id65.total|sub:id66.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td4">Jumlah Biaya Penyusutan</p></td>
+        <td>
+            <div class="nomer">
+            {% if not totalkredit5.total %}
+            {{totaldebet5.total|floatformat:0}}
+            {% elif not totaldebet5.total %}
+            -{{totalkredit5.total|floatformat:0}}
+            {% else %}
+            {{totaldebet5.total|sub:totalkredit5.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td5">Total Beban Operasional</p></td>
+
+    </tr>
+    <tr>
+        <td>6000</td>
+        <td><p class="td1">Departemen Bisnis</p></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6001</td>
+        <td><p class="td3">Pendapatan Diluar Usaha</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id68.total %}
+            {{id67.total|floatformat:0}}
+            {% elif not id67.total %}
+            -{{id68.total|floatformat:0}}
+            {% else %}
+            {{id67.total|sub:id68.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>6002</td>
+        <td><p class="td3">Pendapatan Lainnya</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id70.total %}
+            {{id69.total|floatformat:0}}
+            {% elif not id69.total %}
+            -{{id70.total|floatformat:0}}
+            {% else %}
+            {{id69.total|sub:id70.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td4">Pendapatan Departemen Bisnis</p></td>
+        <td>
+            <div class="nomer">
+            {% if not totalkredit6.total %}
+            {{totaldebet6.total|floatformat:0}}
+            {% elif not totaldebet6.total %}
+            -{{totalkredit6.total|floatformat:0}}
+            {% else %}
+            {{totaldebet6.total|sub:totalkredit6.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+    <tr>
+        <td>6010</td>
+        <td><p class="td2">Biaya Diluar Usaha</p></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6014</td>
+        <td><p class="td3">Biaya Administrasi Bank</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id72.total %}
+            {{id71.total|floatformat:0}}
+            {% elif not id71.total %}
+            -{{id72.total|floatformat:0}}
+            {% else %}
+            {{id71.total|sub:id72.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>6015</td>
+        <td><p class="td3">Dana Sosial</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id74.total %}
+            {{id73.total|floatformat:0}}
+            {% elif not id73.total %}
+            -{{id74.total|floatformat:0}}
+            {% else %}
+            {{id73.total|sub:id74.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>6016</td>
+        <td><p class="td3">Biaya Lain-lain</p></td>
+        <td>
+            <div class="nomer">
+            {% if not id76.total %}
+            {{id75.total|floatformat:0}}
+            {% elif not id75.total %}
+            -{{id76.total|floatformat:0}}
+            {% else %}
+            {{id75.total|sub:id76.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><p class="td4">Surplus/ Kenaikan Aset Bersih (Laba)</p></td>
+        <td>
+            <div class="nomer">
+            {% if not totalkredit7.total %}
+            {{totaldebet7.total|floatformat:0}}
+            {% elif not totaldebet7.total %}
+            -{{totalkredit7.total|floatformat:0}}
+            {% else %}
+            {{totaldebet7.total|sub:totalkredit7.total|floatformat:0}}
+            {% endif %}
+            </div>
+        </td> 
+    </tr>
+
+    <tr>
+        <td>6016</td>
+        <td><p class="td1">Penurunan Aset Bersih (Rugi)</p></td>
+
+    </tr>
+
+
+
+
+
+
+
+
+
+</table>
